@@ -1,0 +1,110 @@
+:root {
+    --blue-100: hsl(225, 100%, 98%);
+    --blue-200: hsl(225, 100%, 94%);
+    --blue-300: hsl(224, 23%, 55%);
+    --blue-400: hsl(245, 83%, 68%);
+    --blue-500: hsl(245, 75%, 52%);
+    --blue-800: hsl(223, 47%, 23%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bold {
+    font-weight: 700;
+}
+.extra-bold {
+    font-weight: 900;
+}
+.light-text {
+    color: var(--blue-300);
+}
+.dark-text {
+    color: var(--blue-800);
+}
+
+body {
+    background-color: var(--blue-200);
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 100vh;
+}
+.card {
+    max-width: 360px;
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.order {
+    padding: 2rem;
+    gap: 1.5rem;
+}
+.annual-plan {
+    background-color: var(--blue-100);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+button {
+    border-style: none;
+    cursor: pointer;
+}
+.change {
+    color: var(--blue-500);
+}
+.proceed {
+    background-color: var(--blue-500);
+    color: var(--blue-100);
+    box-shadow: 1px 10px 8px var(--blue-200);
+}
+.cancel {
+    background-color: transparent;
+}
+.annual-plan p {
+    margin-right: auto;
+}
+.annual-plan,
+.proceed {
+    width: 100%;
+    border-radius: .5rem;
+    padding: .75rem;
+}
+.change:hover {
+    color: var(--blue-400);
+}
+.proceed:hover {
+    background-color: var(--blue-400);
+    transition: all .4s ease-in-out;
+}
+.cancel:hover {
+    color: var(--blue-800);
+}
+
+.attribution { 
+    text-align: center;
+}
+.attribution a { 
+    color: var(--blue-500);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 575px) {
+    body {
+        background-image: url("./images/pattern-background-mobile.svg");
+    }
+}
